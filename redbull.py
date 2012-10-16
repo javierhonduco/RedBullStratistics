@@ -5,7 +5,7 @@
 import datetime, time, urllib2, tweepy
 
 ENABLE_TWEETING = False # Pure crap way... Some uneeded stuff is being loaded but... rough prototyping! :)
-REQUEST_INTERVALE = 600
+REQUEST_INTERVAL = 600
 OUTPUT = os.basename(__file__) + "/whatever.csv"
 
 consumer_key=""
@@ -30,5 +30,5 @@ while 1:
 		open(OUTPUT + ".csv", "a").write(data +", " +  time + "\n")
 	print data + ", " + time # Kinda debugging info 
 	oldata = int(data)
-	time.sleep(REQUEST_INTERVALE)
+	time.sleep(REQUEST_INTERVAL)
 
