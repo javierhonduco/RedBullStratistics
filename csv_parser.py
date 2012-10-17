@@ -11,7 +11,7 @@ class CsvParser:
 
 	def proprocess(self):
 
-		return [(int(line.split(",")[0]), self.prettify(int(line.split(",")[1]))) for line in self.dataStream.split("\n")] # creates the list...
+		return [{int(line.split(",")[0]): self.prettify(int(line.split(",")[1]))} for line in self.dataStream.split("\n")] # creates the list...
 
 	def jsonize(self):
 		import json
